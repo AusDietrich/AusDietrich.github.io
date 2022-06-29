@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header th:insert="fragments/header.html"></header>
+	<div class="row">
+		<div th:each="stock : ${stock}" class="col-sm-12"
+			style="margin-bottom: 20px;">
+			<div class="row">
+				<div class="col-sm-1"></div>
+				I think I gotta remove the thymeleaf and hardcode all this, unfortunately the automation won't work on basic
+				<img class="col-sm-4 storeImg" th:src="${stock.image}"
+					data-bs-toggle="modal" th:attr="data-bs-target=${stock.dataTarget}"
+					th:id="${stock.name}" />
+				<div class="col-sm-7">
+					<div class="row height100">
+						<p class="storeP title" th:text="${stock.name}"></p>
+						<p class="storeP description" th:text="${stock.description}"></p>
+						<p class="storeP clickHere">Interested in this piece? <a class="product" th:href="@{'/contact?piece=' + ${stock.name} + '&custom=true'}">Click here</a> to comission your own piece</p>
+						<!-- Modal -->
+						<div class="modal fade" th:id="${stock.modalId}" tabindex="-1"
+							aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel"></h5>
+										<button type="button" class="btn-close"
+											data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div th:id="${stock.carousel}" class="carousel slide"
+											data-bs-ride="carousel" data-bs-keyboard="true">
+											<div class="carousel-inner">
+												<div th:each="gal, iter: ${stock.gallery}"
+													th:class="${iter.first ? 'carousel-item active' : 'carousel-item' } ">
+													<img th:src="${gal}" class="d-block w-100" height="400px"
+														alt="...">
+												</div>
+											</div>
+										</div>
+										<button class="carousel-control-prev" type="button"
+											th:attr="data-bs-target='#'+${stock.carousel}"
+											data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Previous</span>
+										</button>
+										<button class="carousel-control-next" type="button"
+											th:attr="data-bs-target='#'+${stock.carousel}"
+											data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Next</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header th:insert="fragments/footer.html"> </header>
+</body>
+</html>

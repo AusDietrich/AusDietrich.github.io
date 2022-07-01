@@ -1,0 +1,51 @@
+body {
+	background-color: rgb(0, 0, 64);
+	color: rgb(256, 346, 94);
+}
+
+a {
+	color: rgb(256, 229, 28);
+}
+.storeImg {
+	width: 300px;
+}
+.storeP {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.center {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 0px;
+}
+
+.row {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.title{
+	height:25%;
+}
+.description{
+	height:50%;
+}
+.clickHere{
+	height:25%;
+}
+.height100{
+	height:100%;
+}
+.product{
+		color: rgb(0, 229, 208);
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+}

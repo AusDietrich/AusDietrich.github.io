@@ -16,8 +16,14 @@
 </head>
 
 <body>
-	<header th:insert="fragments/header.html"> </header>
-	<!-- action="https://formspree.io/f/xnqwyaqr" -->
+<header class="header">
+		<h1>Thymeleaf Fragments sample</h1>
+		<div th:fragment="header" style="margin-left: 50px;">
+			<a href="/">Home</a> <a href="/store">Store</a> <a href="/contact">Contact</a>
+			<a href="/about">About Us</a>
+			<div style="margin-bottom: 15px;"></div>
+		</div>
+	</header>	<!-- action="https://formspree.io/f/xnqwyaqr" -->
 	<div class="row" style="padding-right: 0px;">
 		<h1 class="center">Contact Us</h1>
 		<!-- will have to change action to ajax call -->
@@ -37,6 +43,9 @@
 		</form>
 		
 	</div>
-	<header class="footer" th:insert="fragments/footer.html"> </header>
-</body>
+		<div th:fragment="footer">
+		<h1>Thymeleaf Fragments sample</h1>
+	</div>
+	<p style="margin-bottom:0px">Go to the next page to see fragments in action</p>
+	</body>
 </html>

@@ -15,8 +15,15 @@
 </head>
 
 <body>
-	<header th:insert="fragments/header.html"></header>
-	<div class="row">
+<header class="header">
+		<h1>Thymeleaf Fragments sample</h1>
+		<div th:fragment="header" style="margin-left: 50px;">
+			<a href="/">Home</a> <a href="/store">Store</a> <a href="/contact">Contact</a>
+			<a href="/about">About Us</a>
+			<div style="margin-bottom: 15px;"></div>
+		</div>
+	</header>
+		<div class="row">
 		<div th:each="stock : ${stock}" class="col-sm-12"
 			style="margin-bottom: 20px;">
 			<div class="row">
@@ -72,6 +79,9 @@
 			</div>
 		</div>
 	</div>
-	<header th:insert="fragments/footer.html"> </header>
+	<div th:fragment="footer">
+		<h1>Thymeleaf Fragments sample</h1>
+	</div>
+	<p style="margin-bottom:0px">Go to the next page to see fragments in action</p>
 </body>
 </html>

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<header class="header">
+	<header class="header">
 		<h1>Thymeleaf Fragments sample</h1>
 		<div th:fragment="header" style="margin-left: 50px;">
 			<a href="/">Home</a> <a href="/store">Store</a> <a href="/contact">Contact</a>
@@ -23,22 +23,22 @@
 			<div style="margin-bottom: 15px;"></div>
 		</div>
 	</header>
-		<div class="row">
-		<div th:each="stock : ${stock}" class="col-sm-12"
-			style="margin-bottom: 20px;">
+	<div class="row">
+		<div class="col-sm-12" style="margin-bottom: 20px;">
 			<div class="row">
 				<div class="col-sm-1"></div>
-				I think I gotta remove the thymeleaf and hardcode all this, unfortunately the automation won't work on basic
-				<img class="col-sm-4 storeImg" th:src="${stock.image}"
-					data-bs-toggle="modal" th:attr="data-bs-target=${stock.dataTarget}"
-					th:id="${stock.name}" />
+				I think I gotta remove the thymeleaf and hardcode all this,
+				unfortunately the automation won't work on basic 
+				<img class="col-sm-4 storeImg" src="image/red.png" data-bs-toggle="modal" id="red1" />
 				<div class="col-sm-7">
 					<div class="row height100">
-						<p class="storeP title" th:text="${stock.name}"></p>
-						<p class="storeP description" th:text="${stock.description}"></p>
-						<p class="storeP clickHere">Interested in this piece? <a class="product" th:href="@{'/contact?piece=' + ${stock.name} + '&custom=true'}">Click here</a> to comission your own piece</p>
+						<p class="storeP title" th:text="A"></p>
+						<p class="storeP description">Stock Item A</p>
+						<p class="storeP clickHere">
+							Interested in this piece? <a class="product" href="/contact?piece=A&custom=true'}">
+								Click here</a> to comission your own piece</p>
 						<!-- Modal -->
-						<div class="modal fade" th:id="${stock.modalId}" tabindex="-1"
+						<div class="modal fade" id="modalA" tabindex="-1"
 							aria-labelledby="exampleModalLabel" aria-hidden="true">
 							<div class="modal-dialog">
 								<div class="modal-content">
@@ -48,24 +48,21 @@
 											data-bs-dismiss="modal" aria-label="Close"></button>
 									</div>
 									<div class="modal-body">
-										<div th:id="${stock.carousel}" class="carousel slide"
+										<div id="carouselA" class="carousel slide"
 											data-bs-ride="carousel" data-bs-keyboard="true">
 											<div class="carousel-inner">
-												<div th:each="gal, iter: ${stock.gallery}"
-													th:class="${iter.first ? 'carousel-item active' : 'carousel-item' } ">
-													<img th:src="${gal}" class="d-block w-100" height="400px"
-														alt="...">
+													<img src="images/red1.png" class="d-block w-100" height="400px" alt="...">
 												</div>
 											</div>
 										</div>
 										<button class="carousel-control-prev" type="button"
-											th:attr="data-bs-target='#'+${stock.carousel}"
+											th:attr="data-bs-target='#carouselA'"
 											data-bs-slide="prev">
 											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Previous</span>
 										</button>
 										<button class="carousel-control-next" type="button"
-											th:attr="data-bs-target='#'+${stock.carousel}"
+											th:attr="data-bs-target='#'carouselA"
 											data-bs-slide="next">
 											<span class="carousel-control-next-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Next</span>
@@ -82,6 +79,7 @@
 	<div th:fragment="footer">
 		<h1>Thymeleaf Fragments sample</h1>
 	</div>
-	<p style="margin-bottom:0px">Go to the next page to see fragments in action</p>
+	<p style="margin-bottom: 0px">Go to the next page to see fragments
+		in action</p>
 </body>
 </html>

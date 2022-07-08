@@ -26,8 +26,8 @@
 	</header>	<!-- action="https://formspree.io/f/xnqwyaqr" -->
 	<div class="row" style="padding-right: 0px;">
 		<h1 class="center">Contact Us</h1>
-		<!-- will have to change action to ajax call -->
-		<form class="center" th:action="@{/submitted}" th:object="${formObject}">
+		<!-- will have to change action to ajax call th:action="@{/submitted}" -->
+		<form class="center" action="https://formspree.io/f/xnqwyaqr" th:object="${formObject}">
 			<input type="checkbox" id="custom" name="custom" value="custom"
 				th:field="*{custom}"> <label for="custom">Question
 				about a custom piece?</label><br>

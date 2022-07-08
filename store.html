@@ -29,19 +29,13 @@
 				<div class="col-sm-1"></div>
 <!-- 				I think I gotta remove the thymeleaf and hardcode all this,
 				unfortunately the automation won't work on basic  
-				<img class="col-sm-4 storeImg" src="images/red.png" data-bs-toggle="modal" data-target="#modalA" id="red1" />
---><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+				<img class="col-sm-4 storeImg" src="images/red.png" data-bs-toggle="modal" data-target="#modalA" id="red1" />-->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Launch demo modal
 </button>
-				<div class="col-sm-7">
-					<div class="row height100">
-						<p class="storeP title" th:text="A"></p>
-						<p class="storeP description">Stock Item A</p>
-						<p class="storeP clickHere">
-							Interested in this piece? <a class="product" href="/contact?piece=A&custom=true">
-								Click here</a> to comission your own piece</p>
-						<!-- Modal -->
-						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -60,6 +54,14 @@
     </div>
   </div>
 </div>
+				<div class="col-sm-7">
+					<div class="row height100">
+						<p class="storeP title" th:text="A"></p>
+						<p class="storeP description">Stock Item A</p>
+						<p class="storeP clickHere">
+							Interested in this piece? <a class="product" href="/contact?piece=A&custom=true">
+								Click here</a> to comission your own piece</p>
+						<!-- Modal -->  
 						<!-- <div class="modal fade" id="modalA" tabindex="-1" role="dialog"
 							aria-labelledby="exampleModalLabel" aria-hidden="true">
 							<div class="modal-dialog">

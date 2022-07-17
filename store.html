@@ -36,7 +36,7 @@
 						<p class="storeP description">Stock Item A</p>
 						<p class="storeP clickHere">
 							Interested in this piece? <a class="product"
-								onClick="contact(A)"> Click here</a> to comission your own
+								onClick="contact('A')"> Click here</a> to comission your own
 							piece
 						</p>
 						<!-- Modal -->
@@ -203,10 +203,9 @@
 		in action</p>
 	<script type="text/javascript">
 		function contact(piece) {
-			window.location = "/contact";
+			window.location.href = "/contact";
 			document.getElementById('contact').value="I would be interested in "+piece;
-			document.getElementById('custom').checked = true;
-			
+			document.getElementById('custom').checked = true;			
 		}
 	</script>
 </body>

@@ -11,6 +11,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="JS.js"></script>
 </head>
 
 <body>
@@ -201,16 +202,5 @@
 	</div>
 	<p style="margin-bottom: 0px">Go to the next page to see fragments
 		in action</p>
-	<script type="text/javascript">
-		function contact(piece) {
-			window.location.href = "/contact";
-			setTimeout(1000); 
-			otherMethod();
-		}
-		function otherMethod (){
-			document.getElementById('contact').value="I would be interested in "+piece;
-			document.getElementById('custom').checked = true;			
-		}
-	</script>
 </body>
 </html>

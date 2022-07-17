@@ -205,6 +205,9 @@
 		function contact(piece) {
 			window.location.href = "/contact";
 			setTimeout(1000); 
+			otherMethod();
+		}
+		function otherMethod (){
 			document.getElementById('contact').value="I would be interested in "+piece;
 			document.getElementById('custom').checked = true;			
 		}

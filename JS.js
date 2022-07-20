@@ -1,5 +1,5 @@
 
-let textBox = document.getElementById('form-textbox');
+let textBox = document.getElementById('contact');
 let checkedBox = document.getElementById('custom');
 
 function contact(piece) {

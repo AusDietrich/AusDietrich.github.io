@@ -1,8 +1,10 @@
+
+let textBox = document.getElementById('form-textbox');
+let checkedBox = document.getElementById('custom');
+
 function contact(piece) {
 	window.location.href = "/contact";
-	setTimeout(otherMethod(piece), 1000);
-}
-function otherMethod(piece) {
-	document.getElementById('contact').innerHTML = "I would be interested in " + piece;
-	document.getElementById('custom').checked = true;
+    textBox.value = "I would be interested in " + piece;
+    console.log(textBox)
+    checkedBox.checked = true;
 }

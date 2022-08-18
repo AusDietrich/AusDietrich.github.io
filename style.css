@@ -1,6 +1,8 @@
+@import url(//db.onlinewebfonts.com/c/1e129bd49263cbc8354756df5045168f?family=Bodoni);
 body {
 	background-color: rgb(0, 0, 0);
 	color: #FFF;
+	font-family:Bodomi;
 }
 
 a {

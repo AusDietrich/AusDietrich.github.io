@@ -17,18 +17,27 @@
 </head>
 
 <body>
-<header class="header">
-		<h1>Thymeleaf Fragments sample</h1>
-		<div th:fragment="header" style="margin-left: 50px;">
-			<a href="/">Home</a> <a href="/store">Store</a> <a href="/contact">Contact</a>
-			<a href="/about">About Us</a>
-			<div style="margin-bottom: 15px;"></div>
+	<header class="header">
+		<div class="row">
+			<div class="col-sm-4" style="padding:50px 0;">
+				<h1 class="h1Head">Old Castle Crafts</h1>
+			</div>
+			<div class="col-sm-3"></div>
+			<div class="col-sm-5" style="padding:50px 0;">
+				<div style="margin-left: 50px;">
+					<a class="navH" href="/">Home</a>
+					<a class="navH" href="/store">Store</a>
+					<a class="navH" href="/contact">Contact</a>
+					<a class="navH" href="/about">About Us</a>
+					<div style="margin-bottom: 15px;"></div>
+				</div>
+			</div>
 		</div>
 	</header>	<!-- action="https://formspree.io/f/xnqwyaqr" -->
 	<div class="row" style="padding-right: 0px;">
 		<h1 class="center">Contact Us</h1>
 		<!-- will have to change action to ajax call th:action="@{/submitted}" -->
-		<form class="center" action="https://formspree.io/f/xnqwyaqr" th:object="${formObject}">
+		<form class="center" action="https://formspree.io/f/xnqwyaqr" th:object="${formObject}" method="post">
 			<input type="checkbox" id="custom" name="custom" value="custom"
 				th:field="*{custom}"> <label for="custom">Question
 				about a custom piece?</label><br>
@@ -44,7 +53,7 @@
 		</form>
 		
 	</div>
-		<div th:fragment="footer">
+	<div th:fragment="footer">
 		<h1>Thymeleaf Fragments sample</h1>
 	</div>
 	<p style="margin-bottom:0px">Go to the next page to see fragments in action</p>

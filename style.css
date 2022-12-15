@@ -59,29 +59,35 @@ h1 {
   position: fixed;
   bottom: 0;
 }
-	.regNav{
-		display:none;
-	}
- 	.phoneNav{
-		display:initial;
-	}
-	.carImg{
-		 height: 300px;
-    	width: 100%;
-    	object-fit: cover;
-	}
-	.navPhone{
-		background-color:white;
-		color:black;
-		position:absolute;
-		z-index:1;
-		width:100%;
-	}
-	#ohone{
-		display:none;
-	}
+.regNav{
+	display:none;
+}
+.phoneNav{
+	display:initial;
+}
+.carImg{
+	 height: 300px;
+   	width: 100%;
+   	object-fit: cover;
+}
+.navPhone{
+	background-color:white;
+	color:black;
+	position:absolute;
+	z-index:1;
+	width:100%;
+}
+#ohone{
+	display:none;
+	background-color:white;
+}
+.hamBub{
+	color:black;
+}
  @media screen and (min-width: 800px) {
-	 
+	.hamBub{
+		color:black;
+	}
 	.phoneNav{
 		display:none;
 	}
@@ -94,6 +100,6 @@ h1 {
     	object-fit: cover;
 	}
 	.navPhone{
-	display:none;
+		display:none;
 	}
  }

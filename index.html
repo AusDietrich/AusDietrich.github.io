@@ -12,6 +12,7 @@
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="style.css">
+<script src="clicker.js" ></script>  
 </head>
 
 <body>
@@ -20,7 +21,7 @@
 			<div class="col-4" style="padding:15px 0px;">
 				<h1 class="h1Head">Old Castle Crafts</h1>
 			</div>
-			<div class="col-8 phoneNav" style="padding:15px 0px;" onClick="navClick();">
+			<div class="col-8 phoneNav" style="padding:15px 0px;" onclick="navClick()">
 				<div style="margin-left: 50px;">
 					<a class="navH" href="/">Home</a>
 					<div style="margin-bottom: 15px;"></div>
@@ -118,19 +119,5 @@
 	</div>
 	<p style="margin-bottom: 0px">Go to the next page to see fragments
 		in action</p>
-		
-		<script>
-		var bool = 0;
-			function navClick(){
-				if (bool == 0){
-					document.getElementById("ohone").style.display="initial";
-					bool = 1;
-				}
-				else{
-					document.getElementById("ohone").style.display="none";
-					bool = 0;				
-				}
-			}
-		</script>
-</body>
+	</body>
 </html>

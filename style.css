@@ -75,7 +75,7 @@ h1 {
 	#regNav{
 		display:initial;
 	}
-	#imgCarSize{
+	.imgCarSize{
 		height:100px;
 	}
  }

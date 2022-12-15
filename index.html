@@ -17,10 +17,10 @@
 <body>
 	<header class="header">
 		<div class="row">
-			<div class="col-4" style="padding:50px 0px;">
+			<div class="col-4" style="padding:15px 0px;">
 				<h1 class="h1Head">Old Castle Crafts</h1>
 			</div>
-			<div class="col-8 phoneNav" style="padding:50px 0px;">
+			<div class="col-8 phoneNav" style="padding:15px 0px;" onClick="navClick();">
 				<div style="margin-left: 50px;">
 					<a class="navH" href="/">Home</a>
 					<div style="margin-bottom: 15px;"></div>
@@ -34,6 +34,17 @@
 					<a class="navH" href="/about">About Us</a>
 					<div style="margin-bottom: 15px;"></div>
 				</div>
+			</div>
+		</div>
+		<div class="row navPhone"  id="ohone">
+			<div class="col-12 navDiv">
+				<p>ONE</p>
+			</div>
+			<div class="col-12 navDiv">
+				<p>TWO</p>
+			</div>
+			<div class="col-12 navDiv">
+				<p>THEWW</p>
 			</div>
 		</div>
 	</header>
@@ -109,5 +120,19 @@
 	</div>
 	<p style="margin-bottom: 0px">Go to the next page to see fragments
 		in action</p>
+		
+		<script>
+		var bool = 0;
+			function navClick(){
+				if (bool == 0){
+					document.getElementById("ohone").style.display="initial";
+					bool = 1;
+				}
+				else{
+					document.getElementById("ohone").style.display="none";
+					bool = 0;				
+				}
+			}
+		</script>
 </body>
 </html>

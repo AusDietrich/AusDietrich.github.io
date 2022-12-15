@@ -59,3 +59,23 @@ h1 {
   position: fixed;
   bottom: 0;
 }
+	#regNav{
+		display:none;
+	}
+ 	#phoneNav{
+		display:initial;
+	}
+	#imgCarSize{
+		height:500px;
+	}
+ @media screen and (min-width: 800px) {
+	#phoneNav{
+		display:none;
+	}
+	#regNav{
+		display:initial;
+	}
+	#imgCarSize{
+		height:100px;
+	}
+ }

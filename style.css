@@ -65,7 +65,7 @@ h1 {
  	#phoneNav{
 		display:initial;
 	}
-	#imgCarSize{
+	.imgCarSize{
 		height:500px;
 	}
  @media screen and (min-width: 800px) {

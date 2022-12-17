@@ -19,57 +19,81 @@
 <body>
 	<header class="header">
 		<div class="row">
-			<div class="col-4" style="padding:15px 0px;">
+			<div class="col-4" style="padding: 15px 0px;">
 				<h1 class="h1Head">Old Castle Crafts</h1>
 			</div>
-			<div class="col-8 phoneNav" style="padding:15px 0px;" onClick="navClick();">
+			<div class="col-8 phoneNav" style="padding: 15px 0px;"
+				onClick="navClick();">
 				<div style="margin-left: 50px;">
 					<a class="navH" href="/">Home</a>
 					<div style="margin-bottom: 15px;"></div>
 				</div>
 			</div>
-			<div class="col-8 regNav" style="padding:50px 0px;">
+			<div class="col-8 regNav" style="padding: 50px 0px;">
 				<div style="margin-left: 50px;">
-					<a class="navH" href="/">Home</a>
-					<a class="navH" href="/store">Store</a>
-					<a class="navH" href="/contact">Contact</a>
-					<a class="navH" href="/about">About Us</a>
+					<a class="navH" href="/">Home</a> <a class="navH" href="/store">Store</a>
+					<a class="navH" href="/contact">Contact</a> <a class="navH"
+						href="/about">About Us</a>
 					<div style="margin-bottom: 15px;"></div>
 				</div>
 			</div>
 		</div>
-		<div class="row navPhone"  id="ohone">
+		<div class="row navPhone" id="ohone">
 			<div style="margin-left: 50px;">
-					<a class="navH hamBub" href="/">Home</a><br>
-					<a class="navH hamBub" href="/store">Store</a><br>
-					<a class="navH hamBub" href="/contact">Contact</a><br>
-					<a class="navH hamBub" href="/about">About Us</a>
-					<div style="margin-bottom: 15px;"></div>
-				</div>
+				<a class="navH hamBub" href="/">Home</a><br> <a
+					class="navH hamBub" href="/store">Store</a><br> <a
+					class="navH hamBub" href="/contact">Contact</a><br> <a
+					class="navH hamBub" href="/about">About Us</a>
+				<div style="margin-bottom: 15px;"></div>
+			</div>
 		</div>
-	</header>	<!-- action="https://formspree.io/f/xnqwyaqr" -->
+	</header>
+	<!-- action="https://formspree.io/f/xnqwyaqr" -->
 	<div class="row" style="padding-right: 0px;">
 		<h1 class="center">Contact Us</h1>
 		<!-- will have to change action to ajax call th:action="@{/submitted}" -->
-		<form class="center" action="https://formspree.io/f/xnqwyaqr" th:object="${formObject}" method="post">
-			<input type="checkbox" id="custom" name="custom" value="custom"
-				th:field="*{custom}"> <label for="custom">Question
-				about a custom piece?</label><br>
-			<!--required-->
-			Your email: <input type="email" id="email" name="email"
-				th:field="*{email}" required>
-			<p>Questions, comments, concerns?</p>
-			<!--required-->
-			<textarea id="contact" name="contact" rows="4" cols="50"
-				style="resize: none;" th:field="*{textBox}" required></textarea>
-			<br />
-			<button type="submit">Submit</button>
-		</form>
-		
-	</div>
-	<div th:fragment="footer">
-		<h1>Thymeleaf Fragments sample</h1>
-	</div>
-	<p style="margin-bottom:0px">Go to the next page to see fragments in action</p>
-	</body>
+		<div id="desktopTextArea">
+			<form class="center" action="https://formspree.io/f/xnqwyaqr"
+				th:object="${formObject}" method="post">
+				<input type="checkbox" id="custom" name="custom" value="custom"
+					th:field="*{custom}"> <label for="custom">Question
+					about a custom piece?</label><br>
+				<!--required-->
+				Your email: <input type="email" id="email" name="email"
+					th:field="*{email}" required>
+				<p>Questions, comments, concerns?</p>
+				<!--required-->
+				<textarea id="contact" name="contact" rows="4" cols="50"
+					style="resize: none;" th:field="*{textBox}" required></textarea>
+				<br />
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<div id="phoneTextArea">
+			<!-- will have to change action to ajax call th:action="@{/submitted}" -->
+			<div class="desktopSize">
+				<form class="center" action="https://formspree.io/f/xnqwyaqr"
+					th:object="${formObject}" method="post">
+					<input type="checkbox" id="custom" name="custom" value="custom"
+						th:field="*{custom}"> <label for="custom">Question
+						about a custom piece?</label><br>
+					<!--required-->
+					Your email: <input type="email" id="email" name="email"
+						th:field="*{email}" required>
+					<p>Questions, comments, concerns?</p>
+					<!--required-->
+					<textarea id="contact" name="contact" rows="4" cols="40"
+						style="resize: none;" th:field="*{textBox}" required></textarea>
+					<br />
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+
+		</div>
+		<div th:fragment="footer">
+			<h1>Thymeleaf Fragments sample</h1>
+		</div>
+		<p style="margin-bottom: 0px">Go to the next page to see fragments
+			in action</p>
+</body>
 </html>

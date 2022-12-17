@@ -1,105 +1,142 @@
-@import url(//db.onlinewebfonts.com/c/1e129bd49263cbc8354756df5045168f?family=Bodoni);
+@import
+	url(//db.onlinewebfonts.com/c/1e129bd49263cbc8354756df5045168f?family=Bodoni)
+	;
+
 body {
 	background-color: rgb(0, 0, 0);
 	color: #FFF;
-	font-family:Bodomi;
+	font-family: Bodomi;
 }
 
 a {
 	color: rgb(255, 255, 255);
-	text-decoration:none;
+	text-decoration: none;
 }
+
 .storeImg {
 	width: 300px;
 }
+
 .storeP {
-	margin-top:0px;
-	margin-bottom:0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
+
 .center {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
+
 .navH {
-	font-size:30px;
+	font-size: 30px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
+
 h1 {
 	margin-top: 0px;
 }
-.h1Head{
-	text-align:center;
-	color:white;
+
+.h1Head {
+	text-align: center;
+	color: white;
 }
+
 .row {
 	padding-left: 0px;
 	padding-right: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
 }
-.title{
-	height:25%;
+
+.title {
+	height: 25%;
 }
-.description{
-	height:50%;
+
+.description {
+	height: 50%;
 }
-.clickHere{
-	height:25%;
+
+.clickHere {
+	height: 25%;
 }
-.height100{
-	height:100%;
+
+.height100 {
+	height: 100%;
 }
-.product{
-		color: rgb(0, 229, 208);
+
+.product {
+	color: rgb(0, 229, 208);
 }
+
 .footer {
-  position: fixed;
-  bottom: 0;
+	position: fixed;
+	bottom: 0;
 }
-.regNav{
-	display:none;
+
+.regNav {
+	display: none;
 }
-.phoneNav{
-	display:initial;
+
+.phoneNav {
+	display: initial;
 }
-.carImg{
-	 height: 300px;
-   	width: 100%;
-   	object-fit: cover;
+
+.carImg {
+	height: 300px;
+	width: 100%;
+	object-fit: cover;
 }
-.navPhone{
-	background-color:white;
-	color:black;
-	position:absolute;
-	z-index:1;
-	width:100%;
+
+.navPhone {
+	background-color: white;
+	color: black;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
 }
-#ohone{
-	display:none;
-	background-color:white;
+
+#ohone {
+	display: none;
+	background-color: white;
 }
-.hamBub{
-	color:black;
+
+.hamBub {
+	color: black;
 }
- @media screen and (min-width: 800px) {
-	.hamBub{
-		color:black;
+
+#desktopTextArea {
+	display: none;
+}
+
+#phoneTextArea {
+	display: inherit;
+}
+
+@media screen and (min-width: 800px) {
+	.hamBub {
+		color: black;
 	}
-	.phoneNav{
-		display:none;
+	.phoneNav {
+		display: none;
 	}
-	.regNav{
-		display:initial;
+	.regNav {
+		display: initial;
 	}
-	.carImg{
-		 height: 500px;
-    	width: 100%;
-    	object-fit: cover;
+	.carImg {
+		height: 500px;
+		width: 100%;
+		object-fit: cover;
 	}
-	.navPhone{
-		display:none;
+	.navPhone {
+		display: none;
 	}
- }
+	#desktopTextArea {
+		display: inherit;
+	}
+	#phoneTextArea {
+		display: none;
+	}
+}

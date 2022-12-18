@@ -60,7 +60,7 @@
 			<form class="center" action="https://formspree.io/f/xnqwyaqr"
 				th:object="${formObject}" method="post">
 				<input type="checkbox" id="custom" name="custom" value="custom"
-					th:field="*{custom}"> <label for="custom">Question
+					th:field="*{custom}" class="textBoxes"> <label for="custom">Question
 					about a custom piece?</label><br>
 				<!--required-->
 				Your email: <input type="email" id="email" name="email"
@@ -68,7 +68,7 @@
 				<p>Questions, comments, concerns?</p>
 				<!--required-->
 				<textarea id="contact" name="contact" rows="4" cols="50"
-					style="resize: none;" th:field="*{textBox}" required></textarea>
+					style="resize: none;" th:field="*{textBox}" required class="textBoxes"></textarea>
 				<br />
 				<button type="submit">Submit</button>
 			</form>
@@ -79,7 +79,7 @@
 				<form class="center" action="https://formspree.io/f/xnqwyaqr"
 					th:object="${formObject}" method="post">
 					<input type="checkbox" id="custom" name="custom" value="custom"
-						th:field="*{custom}"> <label for="custom">Question
+						th:field="*{custom}"  class="textBoxes"> <label for="custom">Question
 						about a custom piece?</label><br>
 					<!--required-->
 					Your email: <input type="email" id="email" name="email"
@@ -87,7 +87,7 @@
 					<p>Questions, comments, concerns?</p>
 					<!--required-->
 					<textarea id="contact" name="contact" rows="4" cols="35"
-						style="resize: none;" th:field="*{textBox}" required></textarea>
+						style="resize: none;" th:field="*{textBox}" required  class="textBoxes"></textarea>
 					<br />
 					<button type="submit">Submit</button>
 				</form>

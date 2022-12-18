@@ -28,7 +28,9 @@ a {
 	margin-right: auto;
 	text-align: center;
 }
-
+ .textBoxes{
+	 color:black;
+ }
 .navH {
 	font-size: 30px;
 	padding-left: 10px;

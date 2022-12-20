@@ -13,43 +13,46 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="style.css">
-<script src="clicker.js" ></script>
+<script src="clicker.js"></script>
 <script type="text/javascript" src="JS.js"></script>
 </head>
 
 <body>
 	<header class="header">
 		<div class="row">
-			<div class="col-4" style="padding:15px 0px;">
+			<div class="col-4" style="padding: 15px 0px;">
 				<h1 class="h1Head">Old Castle Crafts</h1>
 			</div>
-			<div class="col-8 phoneNav" style="padding:15px 0px;" onclick="navClick()">
+			<div class="col-1 phoneNav"></div>
+			<div style="padding: 15px 0px;" onclick="navClick()"
+				class="col-7 phoneNav">
 				<div style="margin-left: 50px;">
-					<img src="images/hamburger.png"/>
+					<img style="width: 100px; height: 100px;" src="images/hamburger.png">
 					<div style="margin-bottom: 15px;"></div>
 				</div>
 			</div>
-			<div class="col-8 regNav" style="padding:50px 0px;">
+			<div class="col-8 regNav" style="padding: 50px 0px;">
 				<div style="margin-left: 50px;">
-					<a class="navH" href="/">Home</a>
-					<a class="navH" href="/store">Store</a>
-					<a class="navH" href="/contact">Contact</a>
-					<a class="navH" href="/about">About Us</a>
+					<a class="navH" href="/">Home</a> <a class="navH" href="/store">Store</a>
+					<a class="navH" href="/contact">Contact</a> <a class="navH"
+						href="/about">About Us</a>
 					<div style="margin-bottom: 15px;"></div>
 				</div>
 			</div>
 		</div>
-		<div class="row navPhone"  id="ohone">
+		<div class="row navPhone" id="ohone">
 			<div style="margin-left: 50px;">
-					<a class="navH hamBub" href="/">Home</a><br>
-					<a class="navH hamBub" href="/store">Store</a><br>
-					<a class="navH hamBub" href="/contact">Contact</a><br>
-					<a class="navH hamBub" href="/about">About Us</a>
-					<div style="margin-bottom: 15px;"></div>
-				</div>
+				<a class="navH hamBub" href="/">Home</a><br> <a
+					class="navH hamBub" href="/store">Store</a><br> <a
+					class="navH hamBub" href="/contact">Contact</a><br> <a
+					class="navH hamBub" href="/about">About Us</a>
+				<div style="margin-bottom: 15px;"></div>
+			</div>
 		</div>
 	</header>
 	<!-- action="https://formspree.io/f/xnqwyaqr" -->
@@ -68,7 +71,8 @@
 				<p>Questions, comments, concerns?</p>
 				<!--required-->
 				<textarea id="contact" name="contact" rows="4" cols="50"
-					style="resize: none;" th:field="*{textBox}" required class="textBoxes"></textarea>
+					style="resize: none;" th:field="*{textBox}" required
+					class="textBoxes"></textarea>
 				<br />
 				<button type="submit">Submit</button>
 			</form>
@@ -79,15 +83,16 @@
 				<form class="center" action="https://formspree.io/f/xnqwyaqr"
 					th:object="${formObject}" method="post">
 					<input type="checkbox" id="custom" name="custom" value="custom"
-						th:field="*{custom}"  class="textBoxes"> <label for="custom">Question
-						about a custom piece?</label><br>
+						th:field="*{custom}" class="textBoxes"> <label
+						for="custom">Question about a custom piece?</label><br>
 					<!--required-->
 					Your email: <input type="email" id="email" name="email"
 						th:field="*{email}" required>
 					<p>Questions, comments, concerns?</p>
 					<!--required-->
 					<textarea id="contact" name="contact" rows="4" cols="35"
-						style="resize: none;" th:field="*{textBox}" required  class="textBoxes"></textarea>
+						style="resize: none;" th:field="*{textBox}" required
+						class="textBoxes"></textarea>
 					<br />
 					<button type="submit">Submit</button>
 				</form>

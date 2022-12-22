@@ -62,17 +62,17 @@
 		<!-- will have to change action to ajax call th:action="@{/submitted}" -->
 		<div id="desktopTextArea">
 			<form class="center" action="https://formspree.io/f/xnqwyaqr"
-				th:object="${formObject}" method="post">
+				method="post">
 				<input type="checkbox" id="custom" name="custom" value="custom"
-					th:field="*{custom}" class="textBoxes"> <label for="custom">Question
+					class="textBoxes"> <label for="custom">Question
 					about a custom piece?</label><br>
 				<!--required-->
 				Your email: <input type="email" id="email" name="email"
-					th:field="*{email}" required>
+					required>
 				<p>Questions, comments, concerns?</p>
 				<!--required-->
 				<textarea id="contact" name="contact" rows="4" cols="50"
-					style="resize: none;" th:field="*{textBox}" required
+					style="resize: none;" required
 					class="textBoxes"></textarea>
 				<br />
 				<button type="submit">Submit</button>
@@ -82,16 +82,16 @@
 			<!-- will have to change action to ajax call th:action="@{/submitted}" -->
 			<div style="position:relative;margin-left:auto;	margin-right:auto;">
 				<form class="center" action="https://formspree.io/f/xnqwyaqr" method="post">
-					<input type="checkbox" id="custom" name="custom" value="custom"
-						th:field="*{custom}" class="textBoxes"> <label
+					<input type="checkbox" id="custom2" name="custom" value="custom"
+						class="textBoxes"> <label
 						for="custom">Question about a custom piece?</label><br>
 					<!--required-->
 					Your email: <input type="email" id="email" name="email"
-						th:field="*{email}" required>
+						required>
 					<p>Questions, comments, concerns?</p>
 					<!--required-->
-					<textarea id="contact" name="contact" rows="4" cols="35"
-						style="resize: none;" th:field="*{textBox}" required
+					<textarea id="contact2" name="contact" rows="4" cols="35"
+						style="resize: none;" required
 						class="textBoxes"></textarea>
 					<br />
 					<button type="submit" style="color:black">Submit</button>
@@ -99,6 +99,9 @@
 			</div>
 		</div>
 	</div>
+	<button onclick="formFill()">
+    Click to change
+</button>
 	<div th:fragment="footer">
 		<h1>Thymeleaf Fragments sample</h1>
 	</div>

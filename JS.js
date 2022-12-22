@@ -2,16 +2,16 @@
 
 function contact(piece) {
 	window.location.href = "/contact";
-	window.sessionStorage.setItem("checkBox", true);
-	window.sessionstorage.setItem("interest", piece);
-	console.log(window.sessionStorage.getItem("interest"));
-	console.log(window.sessionStorage.getItem("checkBox"));
+	sessionStorage.setItem("checkBox", true);
+	sessionStorage.setItem("interest", piece);
+	console.log(sessionStorage.getItem("interest"));
+	console.log(sessionStorage.getItem("checkBox"));
 	console.log(piece);
 }
 function formFill(){
-	console.log(window.sessionStorage.getItem("interest"));
-	console.log(window.sessionStorage.getItem("checkBox"));
-    document.getElementById('contact').value = "I would be interested in " + window.sessionStorage.getItem("interest");
-    document.querySelector('custom').checked = window.sessionStorage.getItem("checkBox");
+	console.log(sessionStorage.setItem(.getItem("interest"));
+	console.log(sessionStorage.getItem("checkBox"));
+    document.getElementById('contact').value = "I would be interested in " + sessionStorage.getItem("interest");
+    document.querySelector('custom').checked = sessionStorage.getItem("checkBox");
 }
 

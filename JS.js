@@ -9,7 +9,7 @@ function contact(piece) {
 	console.log(piece);
 }
 function formFill(){
-	console.log(sessionStorage.setItem(.getItem("interest"));
+	console.log(sessionStorage.getItem("interest"));
 	console.log(sessionStorage.getItem("checkBox"));
     document.getElementById('contact').value = "I would be interested in " + sessionStorage.getItem("interest");
     document.querySelector('custom').checked = sessionStorage.getItem("checkBox");

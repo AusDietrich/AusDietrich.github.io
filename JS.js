@@ -12,6 +12,6 @@ function formFill(){
 	console.log(sessionStorage.getItem("interest"));
 	console.log(sessionStorage.getItem("checkBox"));
     document.getElementById('contact').value = "I would be interested in " + sessionStorage.getItem("interest");
-    document.getElementById('custom').checked = sessionStorage.getItem("checkBox");
+    document.querySelector('custom').checked = sessionStorage.getItem("checkBox");
 }
 

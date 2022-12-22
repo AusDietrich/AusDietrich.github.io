@@ -11,9 +11,9 @@ function contact(piece) {
 function formFill(){
 	console.log(sessionStorage.getItem("interest"));
 	console.log(sessionStorage.getItem("checkBox"));
-	if(!sessionStorage.getItem("interest") == null){
-    document.getElementById("contact").innerText = "I would be interested in " ;
-    document.getElementById("contact2").innerText = "I would be interested in " ;
+	if(!(sessionStorage.getItem("interest") == null)){
+		document.getElementById("contact").innerText = "I would be interested in " ;
+		document.getElementById("contact2").innerText = "I would be interested in " ;
 	}
 	document.getElementById("custom").checked = sessionStorage.getItem("checkBox");
 	document.getElementById("custom2").checked = sessionStorage.getItem("checkBox");
